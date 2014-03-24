@@ -1,0 +1,49 @@
+// #Buttons
+// ==================================================
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  .gradient(#eee, rgba(255,255,255,.2), rgba(0,0,0,.2));
+  border: 1px solid #aaa;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  .border-radius(3px, 3px, 3px, 3px);
+  color: #444;
+  background-color: white;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 0 1px rgba(255, 255, 255, .75);
+  cursor: pointer;
+  margin-bottom: 20px;
+  line-height: normal;
+  padding: 8px 10px;
+  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  &:hover {
+    color: #222;
+    .gradient(#ddd, rgba(255,255,255,.3), rgba(0,0,0,.3));
+    border: 1px solid #888;
+    border-top: 1px solid #aaa;
+    border-left: 1px solid #aaa;
+  }
+  &:active {
+    border: 1px solid #666;
+    .gradient(#ccc, rgba(255,255,255,.35), rgba(0,0,0,.4));
+  }
+  &.full-width {
+    width: 100%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    text-align: center;
+  }
+}
+
+// Fix for odd Mozilla border & padding issues
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
